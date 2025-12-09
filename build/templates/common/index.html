@@ -21,6 +21,13 @@
                 location.href = location.origin + '/error.html';
             }
         }
+        (function addTrailingSlash() {
+            var path = window.location.pathname;
+            if (path.indexOf('/preview') !== -1 && !path.endsWith('/')) {
+                var newUrl = window.location.origin + path + '/';
+                window.location.replace(newUrl);
+            }
+        })();
     </script>
     <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.ico">
     <link href="../../../common/index.css" rel="stylesheet" />

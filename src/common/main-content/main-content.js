@@ -52,7 +52,7 @@ export class MainContent {
         const curRouterIndex = curRouterData.curIndex;
         const sampleData = curRouterData.isFirst ? samples[data.samples.length - 1] : samples[curRouterIndex - 1];
         const reportPath = sampleData.routerPath ? (sampleData.basePath + '/' + sampleData.routerPath) : sampleData.basePath;
-        hasher.setHash(reportPath);
+        hasher.setHash(reportPath + "/");
     }
 
     onTabNext() {
@@ -62,7 +62,7 @@ export class MainContent {
         const curRouterIndex = curRouterData.curIndex;
         const sampleData = curRouterData.isLast ? samples[0] : samples[curRouterIndex + 1];
         const reportPath = sampleData.routerPath ? (sampleData.basePath + '/' + sampleData.routerPath) : sampleData.basePath;
-        hasher.setHash(reportPath);
+        hasher.setHash(reportPath + "/");
     }
 
     getCurRouterData() {

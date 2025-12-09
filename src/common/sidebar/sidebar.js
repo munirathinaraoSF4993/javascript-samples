@@ -1,5 +1,6 @@
 import samplesData from '../../controls/samples.json';
 import * as hasher from 'hasher';
+import { normalizeHash } from '../router';
 
 export class Sidebar {
     constructor(element) {
@@ -54,7 +55,7 @@ export class Sidebar {
             let index = ele.getAttribute('data-uid');
             let sampleData = samplesData.samples[index];
             const reportPath = sampleData.routerPath ? (sampleData.basePath + '/' + sampleData.routerPath) : sampleData.basePath;
-            hasher.setHash(reportPath);
+            hasher.setHash(reportPath + "/");
         }
     }
 

@@ -1,6 +1,6 @@
 {
   "name": "javascript-samples",
-  "version": "11.1.10",
+  "version": "12.1.12",
   "description": "",
   "author": "",
   "license": "ISC",
@@ -39,8 +39,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "7.2.5",
-    "@boldreports/javascript-reporting-controls": "11.1.10",
-    "@boldreports/javascript-reporting-extensions": "11.1.10",
+    "@boldreports/javascript-reporting-controls": "12.1.12",
+    "@boldreports/javascript-reporting-extensions": "12.1.12",
     "codemirror": "5.58.2",
     "hasher": "1.2.0",
     "jquery": "3.6.0",

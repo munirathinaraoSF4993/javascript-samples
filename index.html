@@ -28,6 +28,15 @@
                 location.href = location.origin + '/error.html';
             }
         }
+        function addTrailingSlash() {
+            var path = window.location.href;
+            if (path && path !== '/' && !path.endsWith('/')) {
+                var newUrl = path + '/';
+                window.location.replace(newUrl);
+            }
+        }
+        addTrailingSlash();
+        window.addEventListener('hashchange', addTrailingSlash, false);
     </script>
     <link rel="stylesheet" href="app.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />

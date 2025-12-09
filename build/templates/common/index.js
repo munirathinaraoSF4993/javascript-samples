@@ -49,6 +49,10 @@ import { SignatureDialog } from './../extensions/report-item-extensions/signatur
 import './../extensions/report-item-extensions/shape.reportitem.css';
 import { EJShape } from './../extensions/report-item-extensions/shape.reportitem';
 
+//PDF signature
+import './../extensions/report-item-extensions/pdf.signature.reportitem.css';
+import { EJPDFSignature } from './../extensions/report-item-extensions/pdf.signature.reportitem';
+
 //globals
 import './../../../src/controls/globals';
 
@@ -69,6 +73,9 @@ let pdfDocument = 'EJPdfDocument';
 let htmlDocument = 'EJHtmlDocument';
 window[pdfDocument] = EJPdfDocument;
 window[htmlDocument] = EJHtmlDocument;
+
+let pdfSignature = 'EJPDFSignature';
+window[pdfSignature] = EJPDFSignature;
 
 //code-mirror
 import 'codemirror/lib/codemirror';

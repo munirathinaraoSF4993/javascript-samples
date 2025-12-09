@@ -21,6 +21,13 @@
                 location.href = location.origin + '/error.html';
             }
         }
+        (function addTrailingSlash() {
+            var path = window.location.pathname;
+            if (path === '/report-designer') {
+                var newUrl = window.location.origin + path + '/' + window.location.search;
+                window.location.replace(newUrl);
+            }
+        })();
     </script>
     <link href="../favicon.ico" type="image/x-icon" rel="shortcut icon" />
     <link href="../common/index.css" rel="stylesheet" />
